@@ -1,5 +1,7 @@
 mod functions;
+mod algorithms;
 
+use algorithms::fizz_buzz;
 use functions::arithmetic_functions;
 
 fn main() {
@@ -9,4 +11,6 @@ fn main() {
 
     let avg = arithmetic_functions::avg(&list[..]);
     println!("Average of values: {:?}", avg);
+
+    fizz_buzz::run();
 }
