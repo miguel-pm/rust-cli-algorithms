@@ -14,8 +14,7 @@ fn get_str_to_print (number: i32) -> String {
 }
 
 pub fn run () {
-    let list = 1..100;
-    for l in list {
+    for l in 0..101 {
         let res = get_str_to_print(l);
         println!("{}", res);
     }

@@ -1,5 +1,5 @@
 [package]
-name = "functions"
+name = "miguelos_cli"
 version = "0.1.0"
 authors = ["MiguelPM <miguelpm@protonmail.com>"]
 edition = "2018"
