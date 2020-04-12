@@ -1,9 +1,11 @@
 use std::io;
 
 mod arithmetic_functions;
+mod string_functions;
 mod cli_options;
 
 use cli_options::calculator;
+use cli_options::string_analysis;
 use cli_options::fibonacci;
 use cli_options::fizz_buzz;
 
@@ -16,8 +18,9 @@ fn main() {
 
         println!("\nSelect one of  the following options:
         1 -> Calculator
-        2 -> Fibonacci Number generator
-        3 -> FizzBuzz Printer");
+        2 -> String analysis and manipulation
+        3 -> Fibonacci Number generator
+        4 -> FizzBuzz Printer");
 
         io::stdin()
             .read_line(&mut n)
@@ -33,13 +36,14 @@ fn main() {
             Err(_) => {
                 println!("Please select a valid option!");
                 continue
-            },
+            }
         };
         println!("You chose {}", n);
         match n {
             1 => calculator::cli(),
-            2 => fibonacci::cli(),
-            3 => {
+            2 => string_analysis::cli(),
+            3 => fibonacci::cli(),
+            4 => {
                 println!("Launching Fizz Buzz Execution!");
                 fizz_buzz::run();
                 println!("There! I hope you liked that :)");
